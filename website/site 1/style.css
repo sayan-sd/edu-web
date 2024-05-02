@@ -249,6 +249,11 @@ header{
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
+.popular-courses-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
 
 .course{
     background: var(--color-bg1);
@@ -508,6 +513,9 @@ footer ul li a:hover{
     .courses-container{
         grid-template-columns: 1fr 1fr;
     }
+     .popular-courses-container{
+        grid-template-columns: 1fr 1fr;
+    }
 
     /* ======================== FAQS ========================= */
     .faq{
@@ -563,6 +571,9 @@ footer ul li a:hover{
 
     /* ======================== POPULAR COURSES ================== */
     .courses-container{
+        grid-template-columns: 1fr;
+    }
+    .popular-courses-container{
         grid-template-columns: 1fr;
     }
 
