@@ -1,0 +1,219 @@
+/* ===================== ACHIEVEMENTS ========================= */
+.about-achievements{
+    margin-top: 3rem;
+}
+
+.about-achievements-container{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 5rem;
+}
+
+.about-achievements-right > p{
+    margin: 1.6rem 0 2.5rem;
+}
+
+.achievements-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    user-select: none;
+}
+
+.achievement-card{
+    background-color: var(--color-bg1);
+    padding: 1.6rem;
+    border-radius: 1rem;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.achievement-card:hover{
+    background: var(--color-bg2);
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+}
+
+.achievement-icon{
+    background: var(--color-danger);
+    padding: 0.6rem 1rem;   
+    border-radius: 1rem;
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.achievement-card:nth-child(2) .achievement-icon{
+    background: var(--color-success);
+}
+.achievement-card:nth-child(3) .achievement-icon{
+    background: var(--color-primary);
+}
+
+.achievement-card p{
+    margin-top: 1rem;
+}
+
+
+/* ==================== TEAM =========================== */
+.team{
+    background: var(--color-bg1);
+    box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+}
+
+.team-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.team-member{
+    background: var(--color-bg2);
+    padding: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    border-radius: 1rem;
+}
+
+.team-member:hover{
+    background: transparent;
+    border-color: var(--color-primary);
+}
+
+.team-member-image img{
+    filter: saturate(0);
+    transition: var(--transition);
+}
+
+.team-member:hover img{
+    filter: saturate(1);
+}
+
+.team-member-info h4{
+    text-align: center;
+    margin-top: 1.4rem;
+}
+
+.team-member-info p{
+    text-align: center;
+}
+
+.team-member-info p{
+    color: var(--color-light);
+}
+
+
+/* ====================== MEDIA QUERIES (TABLES) =====================  */
+@media screen and (max-width: 1024px) {
+    .about-achievements{
+        margin-top: 2rem;
+    }
+
+    .about-achievements-container{
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .about-achievements-left{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .team-container{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .team-member{
+        padding: 1rem;
+    }
+}
+
+/* ====================== MEDIA QUERIES (PHONES) =====================  */
+@media screen and (max-width: 600px) {
+    .achievements-cards{
+        grid-template-columns: 1fr;
+        gap: 0.7rem;
+    }
+
+    .team-container{
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+
+    .team-member{
+        padding: 0;
+    }
+
+    .team-member p{
+        margin-bottom: 1.5rem;
+    }
+}
+
+
+/* ========================= GALERRY =========================  */
+.swiper {
+    border: 2rem solid var(--color-bg1);
+    width: 50%;
+    border-radius: 1rem;
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3)
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: var(--color-bg1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid var(--color-bg1);
+    border-radius: 10%;
+}
+
+.autoplay-progress {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: transparent;
+}
+
+.autoplay-progress svg {
+    --progress: 0;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    stroke-width: 4px;
+    stroke: var(--color-white);
+    fill: none;
+    stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+    stroke-dasharray: 125.6;
+    transform: rotate(-90deg);
+}
+
+/* ====================== MEDIA QUERIES (TABLES) =====================  */
+@media screen and (max-width: 1024px) {
+    .swiper{
+        width: 80%;
+        border: 1.5rem solid var(--color-bg1);
+    }
+}
+
+/* ====================== MEDIA QUERIES (PHONES) =====================  */
+@media screen and (max-width: 600px) {
+    .swiper{
+        width: 96%;
+        border: 0.5rem solid var(--color-bg1);
+    }
+    .autoplay-progress svg{
+        display: none;
+    }
+}
