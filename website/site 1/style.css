@@ -10,7 +10,7 @@
 
 :root{
     
-    --color-primary: #6c63ff;
+    --color-primary: #43455c;
     --color-success: #00bf8e;
     --color-warning: #f7c94b;
     --color-danger: #f75842;
@@ -19,9 +19,9 @@
     --color-gray: #ddd;
     --color-light: rgba(255,255,255,0.7);
     --color-black: #000;
-    --color-bg: #1f2641;
-    --color-bg1: #2e3267;
-    --color-bg2: #424890;
+    --color-bg: #2e3047;
+    --color-bg1: #3c3f58;
+    --color-bg2: #707793;
 
     --container-width-lg: 76%;
     --container-width-md: 90%;
